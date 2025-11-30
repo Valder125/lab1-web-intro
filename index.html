@@ -12,19 +12,37 @@
     <nav>
       <a href="#about">Про роботу</a>
       <a href="#api">Дані з API</a>
+      <a href="#validation">Валідація</a>
     </nav>
   </header>
+  
   <main>
     <section id="about">
       <p>Це базова сторінка з HTML/CSS/JS.</p>
     </section>
+
     <section id="api">
       <h2>REST API приклад</h2>
       <button id="load">Завантажити факт</button>
       <pre id="out">(тут з’являться дані)</pre>
     </section>
+
+    <section id="validation">
+      <h2>Завдання 2: Валідація форми</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="email">Ваш Email:</label>
+          <input type="text" id="email" placeholder="Введіть пошту..." autocomplete="off">
+          <small id="emailError" class="error-msg"></small>
+        </div>
+        <button type="submit" class="btn-submit">Перевірити</button>
+      </form>
+      <p id="successMessage" class="success-msg"></p>
+    </section>
   </main>
-  <footer>© 2025, Чурчак Володимир Володимирович</footer>
+
+  <footer>© 2025, Чурчак Володмимр</footer>
+  
   <script src="./js/app.js"></script>
 </body>
 </html>
