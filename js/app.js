@@ -1,4 +1,3 @@
-// --- БАЗОВА ЧАСТИНА (API) ---
 document.getElementById("load").addEventListener("click", async () => {
   const out = document.getElementById("out");
   out.textContent = "Завантаження...";
@@ -12,33 +11,26 @@ document.getElementById("load").addEventListener("click", async () => {
   }
 });
 
-// --- ІНДИВІДУАЛЬНЕ ЗАВДАННЯ (Валідація форми) ---
 const form = document.getElementById("contactForm");
 const emailInput = document.getElementById("email");
 const emailError = document.getElementById("emailError");
 const successMessage = document.getElementById("successMessage");
 
 form.addEventListener("submit", (event) => {
-  // 1. Зупиняємо стандартну відправку (сторінка не перезавантажиться)
   event.preventDefault();
 
-  // 2. Скидаємо старі повідомлення
   emailError.textContent = "";
   successMessage.textContent = "";
   emailInput.classList.remove("invalid");
 
-  // 3. Отримуємо текст із поля
   const emailValue = emailInput.value.trim();
 
-  // 4. Перевірка: чи є @ і крапка
   if (!emailValue.includes("@") || !emailValue.includes(".")) {
-    // Якщо помилка
-    emailError.textContent = "Помилка! Email має містити '@' та крапку.";
+    emailError.textContent = "Будь ласка, введіть коректність вводу електронної адреси!";
     emailInput.classList.add("invalid");
-    return; // Виходимо, далі код не виконується
+    return;
   }
 
-  // 5. Якщо все ок
-  successMessage.textContent = "Супер! Дані валідні.";
+  successMessage.textContent = "Варіант електронної адреси введено коректно!";
   console.log("Валідний email:", emailValue);
 });
