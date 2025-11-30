@@ -1,0 +1,6 @@
+:root { font-family: system-ui, Arial, sans-serif; }
+body { max-width: 960px; margin: 0 auto; padding: 16px; line-height: 1.5; }
+header, footer { padding: 12px 0; border-bottom: 1px solid #eee; }
+nav a { margin-right: 12px; text-decoration: none; color: blue; }
+button { cursor: pointer; padding: 8px 12px; }
+pre { background: #f4f4f4; padding: 12px; border-radius: 8px; }
